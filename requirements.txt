@@ -1,0 +1,8 @@
+requests
+PyPDF2
+Flask
+dnspython
+tldextract
+reportlab
+# Optional: enables DKIM signature checks for .eml files
+dkimpy
