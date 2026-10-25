@@ -49,7 +49,9 @@ except Exception:
     raise
 
 # ---------------- Config ----------------
-VT_API_KEY = "6ec02441c50b75af8a84588b6639fc5200b51fc3a422e8f1864dda13f0f77438"
+# Read the VirusTotal API key from the environment (never hard-code keys in source code).
+# Without a key, the VirusTotal check is skipped and everything else still works.
+VT_API_KEY = os.environ.get("VIRUSTOTAL_API_KEY", "")
 HEADERS_VT = {"x-apikey": VT_API_KEY} if VT_API_KEY else {}
 TIMEOUT = 20
 DB_PATH = "threat_history.db"
