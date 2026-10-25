@@ -2,3 +2,10 @@
 __pycache__/
 data/
 *.db
+
+# IDE settings
+.idea/
+.vscode/
+
+# Local secrets
+.env
